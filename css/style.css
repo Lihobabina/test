@@ -63,6 +63,9 @@
     overflow-x: hidden;
 }
 
+.header-cont{
+    padding: 0;
+}
 .button_log{
     border: 1px solid #fff;
     border-radius: 21px;
@@ -940,10 +943,11 @@ li,ul {
     .ourServers_servers__O8k3L{
         padding: 0 50px;
     }
+
 }
 @media (max-width:820px){
     .header_header__nav__-qzaK {
-        padding: 30px 30px 0 0;
+        padding: 30px 0px 0 0;
     }
     .container {
         padding-left: 30px;
@@ -972,6 +976,15 @@ li,ul {
     }
     .OurServer_server__number__qb1Kv {font-size: 2rem;}
     .SocialNetworksItem_item__ofi30{
-        width: 80%;
+        width: 100%;
+    }
+    .header_header__nav__-qzaK{
+        flex-direction: column;
+    }
+    .header_header__nav_rigth__QHFtZ .header_list__e4NsJ{
+        flex-wrap: wrap;
+    }
+    .Title_title__GtFh1{
+        font-size: 30px;
     }
 }
