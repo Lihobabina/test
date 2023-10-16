@@ -926,6 +926,71 @@ li,ul {
 .SocialNetworksItem_item__ofi30{
     justify-content: center;
 }
+/*  */
+.hamburger-menu{
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 999;
+}
+.hamburger-menu span, .hamburger-menu span::before, .hamburger-menu span::after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -1px;
+    margin-left: -13px;
+    width: 26px;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+.hamburger-menu span::before, .hamburger-menu span::after{
+    content: '';
+    display: block;
+    transition: 0.3s;
+}
+.hamburger-menu span::before{
+    transform: translateY(-7px);
+}
+.hamburger-menu span::after{
+    transform: translateY(7px);
+}
+.hamburger-active span{
+    height: 0;
+}
+.hamburger-active span::before{
+    transform: rotate(45deg);
+}
+.hamburger-active span::after{
+    transform: rotate(-45deg);
+}
+/*  */
+.menu-mob{
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    background-color: #083378;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    padding: 30px 0;
+    transition: 0.3s;
+    transform: translateX(100%);
+}
+.menu-mob-active{
+    transform: translateX(0);
+}
+.logIn{
+    border: 1px solid #fff;
+  border-radius: 21px;
+  cursor: pointer;
+  padding: 12px 26px;
+}
+/*  */
 @media (max-width:1200px) {
     .container, .header-cont{
         padding-left: 50px;
@@ -942,11 +1007,8 @@ li,ul {
 
 }
 @media (max-width:820px){
-    .header_header__nav__-qzaK {
-        padding: 30px 0px 0 0;
-    }
     .container {
-        padding-left: 30px;
+        padding-left: 0;
     }
     .ourServers_servers__O8k3L {
         padding: 0 30px;
@@ -980,18 +1042,15 @@ li,ul {
         width: 100%;
     }
     .header_header__nav__-qzaK{
-        flex-direction: column;
-    }
-    .header_header__nav_rigth__QHFtZ .header_list__e4NsJ{
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+        padding: 20px;
     }
     .Title_title__GtFh1{
         font-size: 30px;
     }
     .MainSection_main__left__5NC6X{
         padding-top: 300px;
+        width: 100%;
+        align-items: center;
     }
     .Title_subtitle__EZ0Ga {
         font-size: 45px;
@@ -1001,8 +1060,16 @@ li,ul {
     }
     .MainSection_main__left_title__dipNK{
         font-size: 50px;
+        text-align: center;
     }
     .header-cont{
         padding: 0;
+    }
+    .header_header__nav_rigth__QHFtZ .header_list__e4NsJ{
+        gap: 0;
+        display: none;
+    }
+    .hamburger-menu{
+        display: block;
     }
 }
